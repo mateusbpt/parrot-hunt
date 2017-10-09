@@ -1,0 +1,231 @@
+@font-face {
+  font-family: 'duckhunt';
+  src: url("duckhunt.ttf");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  font-family: duckhunt;
+  background: #2a2d64;
+}
+
+input[type=radio] {
+  display: none;
+}
+
+.parrot-hunt-logo {
+  margin-left: 30px;
+}
+
+.parrot-hunt {
+  position: relative;
+  width: 800px;
+  height: 600px;
+  background-image: url("background-2.jpg");
+  background-size: cover;
+  margin: 0 auto;
+  border: 2px #ccd0f3 solid;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.parrot-hunt .parrot + label::before {
+  content: '';
+  display: inline-block;
+  position: relative;
+  background: url("parrot.gif") no-repeat;
+  cursor: url("cursor.png"), auto;
+}
+
+.parrot-hunt .end-game {
+  font-size: 80px;
+  color: #2a2d64;
+  text-align: center;
+  margin-top: 150px;
+  visibility: hidden;
+  animation: end 3s infinite;
+  animation-delay: 23s;
+}
+
+.parrot-hunt #parrot-one + label::before {
+  left: -80px;
+  top: 300px;
+  animation: parrot 5s forwards steps(4);
+  animation-delay: 3s;
+}
+
+.parrot-hunt #parrot-one:checked + label::before {
+  animation-play-state: paused;
+  visibility: hidden;
+}
+
+.parrot-hunt #parrot-two + label::before {
+  left: -160px;
+  top: 300px;
+  animation: parrot-two 6s forwards steps(6);
+  animation-delay: 10s;
+}
+
+.parrot-hunt #parrot-two:checked + label::before {
+  animation-play-state: paused;
+  visibility: hidden;
+}
+
+.parrot-hunt #parrot-three + label::before {
+  left: 680px;
+  top: 300px;
+  animation: parrot-three 6s forwards steps(12);
+  animation-delay: 15s;
+}
+
+.parrot-hunt #parrot-three:checked + label::before {
+  animation-play-state: paused;
+  visibility: hidden;
+}
+
+.parrot-hunt .score {
+  position: absolute;
+  width: 400px;
+  height: 120px;
+  background-color: #ccd0f3;
+  top: 450px;
+  left: 200px;
+  border: 2px #2a2d64 solid;
+  border-radius: 10px;
+}
+
+.parrot-hunt .score .info {
+  color: #2a2d64;
+  font-size: 45px;
+  padding: 5px;
+  letter-spacing: 5px;
+}
+
+.parrot-hunt .score .points {
+  margin-top: -30px;
+  margin-left: 120px;
+}
+
+.parrot-hunt .score .points .point + label::before {
+  content: '';
+  display: inline-block;
+  pointer-events: none;
+  background: url("dead.png") no-repeat;
+}
+
+.parrot-hunt .score .points #parrot-one-point:checked + label::before {
+  background: url("not-dead.png") no-repeat;
+}
+
+.parrot-hunt .score .points #parrot-two-point:checked + label::before {
+  background: url("not-dead.png") no-repeat;
+}
+
+.parrot-hunt .score .points #parrot-three-point:checked + label::before {
+  background: url("not-dead.png") no-repeat;
+}
+
+.container-parrot, .parrot-hunt .parrot + label::before, .parrot-hunt .score .points .point + label::before, .parrot-hunt .score .points #parrot-one-point:checked + label::before, .parrot-hunt .score .points #parrot-two-point:checked + label::before, .parrot-hunt .score .points #parrot-three-point:checked + label::before {
+  height: 70px;
+  width: 70px;
+  background-size: 100%;
+}
+
+@keyframes parrot {
+  25% {
+    left: 100px;
+    top: 0;
+  }
+  50% {
+    left: 200px;
+    top: 100px;
+  }
+  60% {
+    left: 300px;
+    top: 200px;
+  }
+  75% {
+    left: 400px;
+    top: 170px;
+  }
+  90% {
+    left: 600px;
+    top: 100px;
+  }
+  100% {
+    left: 800px;
+    top: 100px;
+  }
+}
+
+@keyframes parrot-two {
+  25% {
+    left: 100px;
+    top: 0;
+  }
+  50% {
+    left: 200px;
+    top: 360px;
+  }
+  60% {
+    left: 400px;
+    top: 250px;
+  }
+  75% {
+    left: 500px;
+    top: 110px;
+  }
+  90% {
+    left: 600px;
+    top: 50px;
+  }
+  100% {
+    left: 800px;
+    top: 0;
+  }
+}
+
+@keyframes parrot-three {
+  25% {
+    left: 600px;
+    top: 300px;
+  }
+  50% {
+    left: 450px;
+    top: 100px;
+  }
+  60% {
+    left: 300px;
+    top: 150px;
+  }
+  75% {
+    left: 250px;
+    top: 250px;
+  }
+  90% {
+    left: 100px;
+    top: 300px;
+  }
+  100% {
+    left: -250px;
+    top: 0px;
+  }
+}
+
+@keyframes end {
+  from {
+    opacity: 0.8;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+ 
+
+ /*# sourceMappingURL= style.css.map */
