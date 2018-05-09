@@ -11,15 +11,11 @@ body {
   display: flex;
   align-items: center;
   font-family: duckhunt;
-  background: #2a2d64;
+  background: #2a2d64 url("logo-parrot.png");
 }
 
 input[type=radio] {
   display: none;
-}
-
-.parrot-hunt-logo {
-  margin-left: 30px;
 }
 
 .parrot-hunt {
@@ -49,7 +45,7 @@ input[type=radio] {
   margin-top: 150px;
   visibility: hidden;
   animation: end 3s infinite;
-  animation-delay: 23s;
+  animation-delay: 24s;
 }
 
 .parrot-hunt #parrot-one + label::before {
@@ -80,7 +76,7 @@ input[type=radio] {
   left: 680px;
   top: 300px;
   animation: parrot-three 6s forwards steps(12);
-  animation-delay: 15s;
+  animation-delay: 16s;
 }
 
 .parrot-hunt #parrot-three:checked + label::before {
@@ -226,6 +222,4 @@ input[type=radio] {
     visibility: visible;
   }
 }
- 
-
- /*# sourceMappingURL= style.css.map */
+/*# sourceMappingURL=style.css.map */
